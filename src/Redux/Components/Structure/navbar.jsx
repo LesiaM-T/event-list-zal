@@ -44,7 +44,7 @@ const Navbar = () => {
         activeStyle={{ background: 'darkgreen' }}
       >
         Логін
-      </NavLink>      
+      </NavLink>
     </div>
   );
 };
