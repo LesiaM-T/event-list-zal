@@ -1,5 +1,6 @@
 // function rootReduser(state, action){
-// return state
+// if (action.type === "onClick")
+//     return state
 // }
 
 // export default rootReduser();

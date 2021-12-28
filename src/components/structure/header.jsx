@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Navbar from './navbar';
+import './structureComponents.scss';
 
 const Header = () => {
   return (
@@ -8,12 +9,8 @@ const Header = () => {
       <Navbar />
       <h1 id="siteTitle">
         <NavLink to="https://www.facebook.com/Zalishchykyturystychni">
-          <span>V</span>
-          <span>i</span>
-          <span>s</span>
-          <span>u</span>
-          <span>a</span>
-          <span>l</span> <span>Shop</span>
+          <h1>Події в твоєму місті </h1>
+          <h2>Заліщики</h2>
         </NavLink>
       </h1>
     </div>
