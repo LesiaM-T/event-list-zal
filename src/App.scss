@@ -1,19 +1,13 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  @import '~bootstrap/scss/bootstrap';
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #454547;
+  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
