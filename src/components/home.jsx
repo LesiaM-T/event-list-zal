@@ -1,9 +1,10 @@
 import React from 'react';
+import Slideshow from './structure/slides/slides';
 
 const Home = () => {
   return (
     <>
-      <h1>home</h1>
+      <Slideshow />
     </>
   );
 };

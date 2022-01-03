@@ -3,9 +3,9 @@ import './footer.scss';
 
 const Footer = () => (
   <div className="footer">
-    <h4>Всі події в Заліщиках на одному сайті</h4>
+    <h6>Всі події в Заліщиках на одному сайті</h6>
     <div className="buttons">
-      <h5>Find us</h5>
+      <p>Find us</p>
       <a href="https://www.facebook.com/Zalishchykyturystychni">
         <div className="btn2" />
       </a>
