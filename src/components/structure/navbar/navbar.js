@@ -1,10 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './navbar.scss';
 
 const Navbar = () => (
   <>
-    <nav className="navbar navbar-dark   navbar-expend-lg bg-primary">
-      <div className="navbar-brand">події в твоєму місті</div>
+    <nav className="navbar">
+      <div className="title">
+        <img src="logo.png" alt="Logo" width="300" />
+        
+      </div>
 
       <ul className="navbar-nav">
         <li className="nav-item">
