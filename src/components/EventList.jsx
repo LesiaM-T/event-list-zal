@@ -15,11 +15,12 @@ const EventList = () => {
     getEvents();
   }, []);
 
-
+  function shortDescribtion(str) {
+    return str.split(/\s+/).slice(0, 9).join(' ');
+  }
 
   return (
     <div className="card-list">
-      {' '}
       {events.map(event => {
         return (
           <div className="card" key={event.id}>
@@ -30,11 +31,15 @@ const EventList = () => {
               <div className="card-title-group">
                 <h5 className="card-title">{event.title}</h5>
                 <div className="card-date">{event.Category}</div>
-                <div className="card-date">{moment(event.time).format("MMM Do YY")}</div>
+                <div className="card-date">
+                  {moment(event.time).format('MM.D o h:mm')}
+                </div>
               </div>
             </div>
             <img className="card-image" src={event.Picture} alt="Logo" />
-            <div className="card-text">{event.Description}</div>
+            <div className="card-text">
+              {shortDescribtion(event.Description)} ...
+            </div>
           </div>
         );
       })}
