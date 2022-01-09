@@ -18,7 +18,12 @@ const EventList = () => {
   function shortDescribtion(str) {
     return str.split(/\s+/).slice(0, 9).join(' ');
   }
+  const handleClick = id => {
+    // setEvent(events.filter(item => item.id === id));
+    const itemm = events.find(item => item.id === id);
+    console.log(itemm.title);
 
+  }
   return (
     <div className="card-list">
       {events.map(event => {
@@ -40,7 +45,11 @@ const EventList = () => {
             <div className="card-text">
               {shortDescribtion(event.Description)} ...
             </div>
+            <button type="button" onClick={() => handleClick(event.id)}>
+            Детальніше
+          </button>
           </div>
+        
         );
       })}
     </div>
