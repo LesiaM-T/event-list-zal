@@ -11,7 +11,7 @@ const Navbar = () => (
 
       <ul className="navbar-nav">
         <li className="nav-item">
-          <NavLink className="nav-link" to="/" exact>
+          <NavLink className="nav-link" to="/">
             {' '}
             Головна
           </NavLink>

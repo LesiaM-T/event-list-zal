@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/prop-types */
 
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-import { Button } from 'react-bootstrap';
+
+import LikeButtons from './likeButtons';
 
 function ModalEvent(props) {
   return (
@@ -19,7 +21,7 @@ function ModalEvent(props) {
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <LikeButtons />
       </Modal.Footer>
     </Modal>
   );
