@@ -8,7 +8,9 @@ import ModalEvent from '../modal/modalEvent';
 const EventList = () => {
   const [events, setEvent] = useState([]);
 
-  // const [currenEvent, setCurrentEvent] = useState(1);
+  const [modalShow, setModalShow] = useState(false);
+
+  const [currenEvent, setCurrentEvent] = useState(1);
 
   const getEvents = async () => {
     const response = await axios.get('http://localhost:5000/events');
@@ -27,48 +29,51 @@ const EventList = () => {
   //   const itemm = events.find(item => item.id === id);
   //   console.log(itemm.title);
   // };
-  const [modalShow, setModalShow] = useState(false);
 
   return (
-    <div className="card-list">
-      {events.map((event) => {
-        return (
-          <div key={event.id}>
-            <div className="card-header">
-              <div className="profile">
-                <span className="letter">{event.category}</span>
-              </div>
-              <div className="card-title-group">
-                <h5 className="card-title">{event.title}</h5>
-                <div className="card-date">{event.Category}</div>
-                <div className="card-date">
-                  {moment(event.time).format('MM.D o h:mm')}
+    <section>
+      <div className="card-list">
+        {events.map((event, index) => {
+          return (
+            <div key={event.id}>
+              <div className="card-header">
+                <div className="profile">
+                  <span className="letter">{event.category}</span>
+                </div>
+                <div className="card-title-group">
+                  <h5 className="card-title">{event.title}</h5>
+                  <div className="card-date">{event.Category}</div>
+                  <div className="card-date">
+                    {moment(event.time).format('MM.D o h:mm')}
+                  </div>
                 </div>
               </div>
+              <img className="card-image" src={event.Picture} alt="Logo" />
+              <div className="card-text">
+                {shortDescribtion(event.Description)} ...
+              </div>
+              <button
+                type="button"
+                className="btn btn-outline-secondary"
+                onClick={() => {
+                  setModalShow(true);
+                  setCurrentEvent(index);
+                }}
+              >
+                Детальніше
+              </button>
             </div>
-            <img className="card-image" src={event.Picture} alt="Logo" />
-            <div className="card-text">
-              {shortDescribtion(event.Description)} ...
-            </div>
-            <button
-              type="button"
-              className="btn btn-outline-secondary"
-              onClick={() => setModalShow(true)}
-            >
-              Детальніше
-            </button>
-
-            <ModalEvent
-              show={modalShow}
-              onHide={() => setModalShow(false)}
-              title={event.title}
-              picture={event.Picture}
-              description={event.Description}
-            />
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+      <ModalEvent
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        title={events[currenEvent]?.title}
+        picture={events[currenEvent]?.Picture}
+        description={events[currenEvent]?.Description}
+      />
+    </section>
   );
 };
 
