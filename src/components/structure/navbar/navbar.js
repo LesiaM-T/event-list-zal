@@ -19,7 +19,7 @@ const Navbar = () => (
         <li className="nav-item">
           <NavLink className="nav-link" to="/about">
             {' '}
-            Інформація
+            Всі події
           </NavLink>
         </li>
       </ul>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './EventList.scss';
 import moment from 'moment';
 import { useParams } from 'react-router-dom';
 
@@ -23,7 +22,7 @@ const EventItem = () => {
 
   return (
     <div className="card-list">
-      <div className="card" key={EventItem()}>
+      <div className="card" key={getEventById()}>
         <div className="card-header">
           <div className="profile">
             <span className="letter">{event.category}</span>

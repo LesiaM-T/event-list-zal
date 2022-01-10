@@ -18,11 +18,11 @@ const slideImages = [
   },
   {
     url: 'images/slide_5.jpg',
-    caption: 'Slide 3',
+    caption: 'Slide 4',
   },
   {
     url: 'images/slide_6.jpg',
-    caption: 'Slide 3',
+    caption: 'Slide 5',
   },
 ];
 
@@ -31,7 +31,7 @@ const Slideshow = () => {
     <div className="slide-container">
       <Slide>
         {slideImages.map(slideImage => (
-          <div className="each-slide" key={slideImage.id}>
+          <div className="each-slide" key={slideImage.caption}>
             <div style={{ backgroundImage: `url(${slideImage.url})` }}>
               <span>{slideImage.caption}</span>
             </div>

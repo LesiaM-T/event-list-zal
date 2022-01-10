@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './EventList.scss';
+
 import moment from 'moment';
+import './EventList.scss';
+import ModalEvent from '../modal/modalEvent';
 
 const EventList = () => {
   const [events, setEvent] = useState([]);
+
+  // const [currenEvent, setCurrentEvent] = useState(1);
 
   const getEvents = async () => {
     const response = await axios.get('http://localhost:5000/events');
@@ -16,19 +20,20 @@ const EventList = () => {
   }, []);
 
   function shortDescribtion(str) {
-    return str.split(/\s+/).slice(0, 9).join(' ');
+    return str.split(/\s+/).slice(0, 10).join(' ');
   }
-  const handleClick = id => {
-    // setEvent(events.filter(item => item.id === id));
-    const itemm = events.find(item => item.id === id);
-    console.log(itemm.title);
+  // const handleClick = id => {
+  //   // setEvent(events.filter(item => item.id === id));
+  //   const itemm = events.find(item => item.id === id);
+  //   console.log(itemm.title);
+  // };
+  const [modalShow, setModalShow] = useState(false);
 
-  }
   return (
     <div className="card-list">
-      {events.map(event => {
+      {events.map((event) => {
         return (
-          <div className="card" key={event.id}>
+          <div key={event.id}>
             <div className="card-header">
               <div className="profile">
                 <span className="letter">{event.category}</span>
@@ -45,11 +50,22 @@ const EventList = () => {
             <div className="card-text">
               {shortDescribtion(event.Description)} ...
             </div>
-            <button type="button" onClick={() => handleClick(event.id)}>
-            Детальніше
-          </button>
+            <button
+              type="button"
+              className="btn btn-outline-secondary"
+              onClick={() => setModalShow(true)}
+            >
+              Детальніше
+            </button>
+
+            <ModalEvent
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+              title={event.title}
+              picture={event.Picture}
+              description={event.Description}
+            />
           </div>
-        
         );
       })}
     </div>
