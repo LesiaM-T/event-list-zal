@@ -15,9 +15,9 @@ function ModalEvent(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div className="card-list">
-          <img className="card-image" src={props.picture} alt="Logo" />
-          <div className="card-text"> {props.description}</div>
+        <div className="">
+          <img className="" src={props.picture} alt="Logo" />
+          <div className=""> {props.description}</div>
         </div>
       </Modal.Body>
       <Modal.Footer>

@@ -3,6 +3,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
 	padding-top: 10px;
+	vertical-align: middle;
 }
 
 .card {
@@ -15,6 +16,7 @@
 	border-style: solid;
 	transition: 200ms;
     max-width: 380px;
+	vertical-align: middle;
 	}
 
 .card:hover {
@@ -26,48 +28,59 @@
 
 .card-header {
 	display: flex;
-	flex-wrap: nowrap;
+	justify-content: center;
 	align-items: center;
 
 }
 
 .profile {
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: tomato;
-	border-radius: 50%;
+	display: inline-flex;
+	width: 10 px;
+	border-radius: 40%;
 	margin: 10px;
 	font-size: 20pt;
 	text-align: center;
 	font-weight: bold;
-	color: white;
+	color: rgb(8, 8, 8);
 	justify-content: center;
+	box-sizing: border-box;
+	
+	
 }
 
 .letter {
-	vertical-align: middle;
+	vertical-align: center;
+	float: left;
 }
 
 .card-title-group {
 	justify-content: center;
 	height: 100px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	line-height: 100px;
+	display: block;
+	flex-direction: column;	
 
-}
-
+	}
+	.title-text{
+		display: inline-block;
+		line-height: normal;
+		vertical-align: middle;
+	}
 .card-title {
 	flex: 0.5;
 	font-size: large;
 	margin-bottom: 0;
 	margin-top: 0;
+	
+	
 }
 .card-date {
 	flex: 0.3;
 	font-size: small;
 	margin-top: 0;
+	line-height: normal;
+	color: #585757;
+
 }
 
 .card-image {
@@ -77,6 +90,10 @@
 	height: 250px;
 
 
+}
+
+.card-text{
+	height: 80px;
 }
  .btn btn-outline-secondary{
 	 margin-bottom: 5px;

@@ -35,16 +35,18 @@ const EventList = () => {
       <div className="card-list">
         {events.map((event, index) => {
           return (
-            <div key={event.id}>
+            <div className="card" key={event.id}>
               <div className="card-header">
                 <div className="profile">
-                  <span className="letter">{event.category}</span>
+                  <span className="letter">
+                    {moment(event.time).format('D. MM')}
+                  </span>
                 </div>
                 <div className="card-title-group">
-                  <h5 className="card-title">{event.title}</h5>
-                  <div className="card-date">{event.Category}</div>
-                  <div className="card-date">
-                    {moment(event.time).format('MM.D o h:mm')}
+                  
+                  <div className="title-text">
+                    <h5 className="card-title">{event.title}</h5>
+                    <div className="card-date">{event.Category}</div>
                   </div>
                 </div>
               </div>
