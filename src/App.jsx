@@ -15,7 +15,10 @@ function App() {
           <h2>Aside Header</h2>
           <p>no facebook</p>
           <p>
-            facebook <a href="https://www.facebook.com/Zalishchykyturystychni">Inline Link</a>
+            facebook{' '}
+            <a href="https://www.facebook.com/Zalishchykyturystychni">
+              Inline Link
+            </a>
           </p>
         </aside>
         <Footer />
