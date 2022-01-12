@@ -32,9 +32,7 @@ const Slideshow = () => {
       <Slide>
         {slideImages.map(slideImage => (
           <div className="each-slide" key={slideImage.caption}>
-            <div style={{ backgroundImage: `url(${slideImage.url})` }}>
-              <span>{slideImage.caption}</span>
-            </div>
+            <div style={{ backgroundImage: `url(${slideImage.url})` }}></div>
           </div>
         ))}
       </Slide>

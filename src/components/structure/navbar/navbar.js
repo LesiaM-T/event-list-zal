@@ -1,10 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Template from '../template/Template';
 import './navbar.scss';
 
 const Navbar = () => (
   <>
     <nav className="navbar">
+    <Template>
       <div className="title">
         <img src="logo.png" alt="Logo" width="300" />
       </div>
@@ -23,6 +25,7 @@ const Navbar = () => (
           </NavLink>
         </li>
       </ul>
+      </Template>
     </nav>
   </>
 );

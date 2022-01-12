@@ -4,6 +4,7 @@ import axios from 'axios';
 import moment from 'moment';
 import './EventList.scss';
 import ModalEvent from '../modal/modalEvent';
+import Template from '../template/Template';
 
 const EventList = () => {
   const [events, setEvent] = useState([]);
@@ -32,7 +33,9 @@ const EventList = () => {
 
   return (
     <section>
+    <Template>
       <div className="card-list">
+      
         {events.map((event, index) => {
           return (
             <div className="card" key={event.id}>
@@ -43,7 +46,6 @@ const EventList = () => {
                   </span>
                 </div>
                 <div className="card-title-group">
-                  
                   <div className="title-text">
                     <h5 className="card-title">{event.title}</h5>
                     <div className="card-date">{event.Category}</div>
@@ -67,6 +69,7 @@ const EventList = () => {
             </div>
           );
         })}
+       
       </div>
       <ModalEvent
         show={modalShow}
@@ -75,6 +78,7 @@ const EventList = () => {
         picture={events[currenEvent]?.Picture}
         description={events[currenEvent]?.Description}
       />
+       </Template>
     </section>
   );
 };

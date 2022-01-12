@@ -1,8 +1,10 @@
 import React from 'react';
 import './footer.scss';
+import Template from '../template/Template';
 
 const Footer = () => (
   <div className="footer">
+   <Template>
     <h6>Всі події в Заліщиках на одному сайті</h6>
     <div className="buttons">
       <p>Find us</p>
@@ -16,6 +18,7 @@ const Footer = () => (
         <div className="btn4" />
       </a>
     </div>
+    </Template>
   </div>
 );
 
