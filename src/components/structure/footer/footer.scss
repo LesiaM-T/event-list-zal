@@ -4,17 +4,24 @@
     margin-top: 1rem;
     padding: 2rem;
     background-color: $accentColor;
+<<<<<<< HEAD
     position: relative;
+=======
+    position: fixed;
+>>>>>>> 08c7efd (navbar and footer)
     bottom: 0;
     left: 0;
     width: 100%;
     color: $textColor; 
   }
+<<<<<<< HEAD
   .h6{
     position: absolute;
     left: 0px;
     top: 0px;
   }
+=======
+>>>>>>> 08c7efd (navbar and footer)
   .buttons {
     overflow: auto;
     position: absolute;

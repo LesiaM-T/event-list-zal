@@ -1,6 +1,7 @@
 @media (prefers-reduced-motion: no-preference) {
   @import '~bootstrap/scss/bootstrap';
 }
+<<<<<<< HEAD
 
 
 body {
@@ -17,3 +18,13 @@ body {
   text-align: center;
 }
 
+=======
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lora', serif;
+}
+>>>>>>> 08c7efd (navbar and footer)
