@@ -1,0 +1,19 @@
+@media (prefers-reduced-motion: no-preference) {
+  @import '~bootstrap/scss/bootstrap';
+}
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lora', serif;
+}
+
+
+.App {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+

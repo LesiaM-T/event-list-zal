@@ -1,0 +1,14 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lora', serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

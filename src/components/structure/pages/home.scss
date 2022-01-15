@@ -1,0 +1,55 @@
+@import '/src/styles/vars';
+
+.main-page{
+    display:block;
+    margin: 50px;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.invite{
+    margin-bottom: 30px;
+}
+.categories-block{
+   
+    margin-bottom: 20px;
+}
+
+.categories-list{
+    font-size: 22px;
+    max-width: 400px;
+    line-height: 2;
+    margin: 0 auto;
+
+}
+
+.ctg-item{
+background-color: $accentColor;
+box-shadow: rgb(43, 56, 68);
+margin: 5px;
+border-radius: 10%;
+padding: 0 20px;
+}
+
+
+.ctg-item:hover{
+    border-color: plum;
+    border: black;
+    border-width: 1px;
+    background-color: rgb(233, 210, 108);
+
+}
+
+h2 {
+font-size: 20px;
+}
+
+@media only screen and (min-width : 992px) {
+    .slide-container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;}
+}
