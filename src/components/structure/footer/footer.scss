@@ -9,11 +9,13 @@
     left: 0;
     width: 100%;
     color: $textColor; 
+   
   }
-  .h6{
+  .h5{
     position: absolute;
     left: 0px;
     top: 0px;
+  
   }
   .buttons {
     overflow: auto;
@@ -22,6 +24,7 @@
     top: 0px;
     padding: 10px;
     margin: 5px;
+    
     div {
       float: left;
       width: 30px;
@@ -49,5 +52,6 @@
     @media (max-width: 500px) {
       position: static;
       display: inline-block;
+  
     }
   }
