@@ -1,0 +1,43 @@
+.contained-modal-title-vcenter{
+    text-align: center;
+    }
+    #contained-modal-title-vcenter {
+        text-align: center;
+        margin: 0;
+        padding: 0px;
+        position: relative;
+    }
+    .title{
+        font-size: 30pt;
+        
+        font-style: normal;
+        line-height: 1;
+        
+    }
+    .place, .time {
+        font-size: medium;
+        font-weight: bold;
+        font-style: normal;
+        text-align: left;
+    }
+    
+    
+    .modal-body{
+        justify-content: center;
+        text-align: center;
+        margin: 0px;
+    }
+    
+    .picture{
+        margin-bottom: 20px;
+        
+    }
+    
+    .modal-header .btn-close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        margin: 5px;
+        width: 25px;
+        height: 25px;
+    }

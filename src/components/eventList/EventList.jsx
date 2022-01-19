@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import moment from 'moment';
 import './EventList.scss';
 import ModalEvent from '../modal/modalEvent';
-import Template from '../template/Template';
+import Constants from '../../constants/constans';
 
 const EventList = () => {
   const [events, setEvent] = useState([]);
@@ -23,7 +22,7 @@ const EventList = () => {
   }, []);
 
   function shortDescribtion(str) {
-    return str.split(/\s+/).slice(0, 10).join(' ');
+    return str.split(/\s+/).slice(0, 9).join(' ');
   }
   // const handleClick = id => {
   //   // setEvent(events.filter(item => item.id === id));
@@ -33,16 +32,16 @@ const EventList = () => {
 
   return (
     <section>
-    <Template>
       <div className="card-list">
-      
         {events.map((event, index) => {
           return (
             <div className="card" key={event.id}>
               <div className="card-header">
                 <div className="profile">
                   <span className="letter">
-                    {moment(event.time).format('D. MM')}
+                    {moment(event.time).format('DD.')}
+                    <br />
+                    {moment(event.time).format('MM')}
                   </span>
                 </div>
                 <div className="card-title-group">
@@ -64,12 +63,11 @@ const EventList = () => {
                   setCurrentEvent(index);
                 }}
               >
-                Детальніше
+                {Constants.MORE}
               </button>
             </div>
           );
         })}
-       
       </div>
       <ModalEvent
         show={modalShow}
@@ -77,8 +75,10 @@ const EventList = () => {
         title={events[currenEvent]?.title}
         picture={events[currenEvent]?.Picture}
         description={events[currenEvent]?.Description}
+        time={moment(events[currenEvent]?.time).format('DD.MM o h:mm')}
+        place={events[currenEvent]?.Place}
+        category={events[currenEvent]?.Category}
       />
-       </Template>
     </section>
   );
 };

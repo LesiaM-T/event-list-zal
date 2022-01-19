@@ -3,8 +3,8 @@
 
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
-
 import LikeButtons from './likeButtons';
+import './modalEvent.scss';
 
 function ModalEvent(props) {
   return (
@@ -12,6 +12,10 @@ function ModalEvent(props) {
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           {props.title}
+          <div className="time">Початок: {props.time} </div>
+          <div className="place">
+            Місце проведення:<b> {props.place} </b>
+          </div>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
